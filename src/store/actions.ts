@@ -104,6 +104,6 @@ export const isActionClearBoard = (action: Action): action is ActionClearBoard =
   action.type === ACTION_CLEAR_BOARD
 );
 
-export const clearBoard = (rules: Rules): ActionClearBoard => ({
+export const clearBoard = (): ActionClearBoard => ({
   type: ACTION_CLEAR_BOARD,
 });
