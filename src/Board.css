@@ -1,0 +1,9 @@
+.Board {
+  border-collapse: collapse;
+}
+
+.Board tr,
+.Board td {
+  margin: 0;
+  padding: 0;
+}
