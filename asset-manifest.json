@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/checkbox-cellular-automata/static/css/main.5d45e0b9.chunk.css",
-    "main.js": "/checkbox-cellular-automata/static/js/main.00d319e0.chunk.js",
-    "main.js.map": "/checkbox-cellular-automata/static/js/main.00d319e0.chunk.js.map",
+    "main.js": "/checkbox-cellular-automata/static/js/main.5ad69d6b.chunk.js",
+    "main.js.map": "/checkbox-cellular-automata/static/js/main.5ad69d6b.chunk.js.map",
     "runtime-main.js": "/checkbox-cellular-automata/static/js/runtime-main.7f43383b.js",
     "runtime-main.js.map": "/checkbox-cellular-automata/static/js/runtime-main.7f43383b.js.map",
     "static/css/2.dfbc895d.chunk.css": "/checkbox-cellular-automata/static/css/2.dfbc895d.chunk.css",
     "static/js/2.80eda5f1.chunk.js": "/checkbox-cellular-automata/static/js/2.80eda5f1.chunk.js",
     "static/js/2.80eda5f1.chunk.js.map": "/checkbox-cellular-automata/static/js/2.80eda5f1.chunk.js.map",
     "index.html": "/checkbox-cellular-automata/index.html",
-    "precache-manifest.0d8fc8ab3af8972f11706c21187321a5.js": "/checkbox-cellular-automata/precache-manifest.0d8fc8ab3af8972f11706c21187321a5.js",
+    "precache-manifest.f56e329fc6440822a66a104bfaf829f3.js": "/checkbox-cellular-automata/precache-manifest.f56e329fc6440822a66a104bfaf829f3.js",
     "service-worker.js": "/checkbox-cellular-automata/service-worker.js",
     "static/css/2.dfbc895d.chunk.css.map": "/checkbox-cellular-automata/static/css/2.dfbc895d.chunk.css.map",
     "static/css/main.5d45e0b9.chunk.css.map": "/checkbox-cellular-automata/static/css/main.5d45e0b9.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.dfbc895d.chunk.css",
     "static/js/2.80eda5f1.chunk.js",
     "static/css/main.5d45e0b9.chunk.css",
-    "static/js/main.00d319e0.chunk.js"
+    "static/js/main.5ad69d6b.chunk.js"
   ]
 }
