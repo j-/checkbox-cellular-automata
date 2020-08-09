@@ -1,7 +1,7 @@
 import { Board, buildBoard, getIndexByCoords, getCellNextState } from './game';
 
-const testBoard = (str: TemplateStringsArray): Board => (
-  Array.from(str[0].matchAll(/[X-]/g), ([symbol]) => symbol === 'X')
+const testBoard = ([str]: TemplateStringsArray): Board => (
+  Array.from(str.match(/[X-]/g) || [], (symbol) => symbol === 'X')
 );
 
 describe('buildBoard()', () => {
