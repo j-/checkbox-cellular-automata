@@ -4,8 +4,9 @@ import Config from './Config';
 import Controls from './Controls';
 
 const App: React.FC = () => (
-  <div className="App container-fluid">
-    <h1 className="mt-5 mb-4">Checkbox cellular automata</h1>
+  <div className="App container-fluid my-5">
+    <a href="https://skeoh.com/" className="text-secondary">&larr; skeoh.com</a>
+    <h1 className="mb-5">Checkbox cellular automata</h1>
     <div className="row">
       <div className="col-md">
         <div className="card card-body">
