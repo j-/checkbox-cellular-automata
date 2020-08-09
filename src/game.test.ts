@@ -50,7 +50,7 @@ describe('getIndexByCoords()', () => {
     expect(getIndexByCoords(6, 0, { width: 5, height: 5 })).toBe(1);
     expect(getIndexByCoords(6, 1, { width: 5, height: 5 })).toBe(6);
   });
-  
+
   it('returns x=width-1 when x is -1', () => {
     expect(getIndexByCoords(-1, 0, { width: 5, height: 5 })).toBe(4);
     expect(getIndexByCoords(-1, 1, { width: 5, height: 5 })).toBe(9);
@@ -60,7 +60,7 @@ describe('getIndexByCoords()', () => {
     expect(getIndexByCoords(0, 5, { width: 5, height: 5 })).toBe(0);
     expect(getIndexByCoords(1, 5, { width: 5, height: 5 })).toBe(1);
   });
-  
+
   it('returns y=height-1 when y is -1', () => {
     expect(getIndexByCoords(0, -1, { width: 5, height: 5 })).toBe(20);
     expect(getIndexByCoords(1, -1, { width: 5, height: 5 })).toBe(21);
@@ -93,7 +93,7 @@ describe('getCellNextState()', () => {
     expect(getCellNextState(board0, 1, 1, dimensions, rules)).toBe(false);
     expect(getCellNextState(board1, 1, 1, dimensions, rules)).toBe(false);
   });
-  
+
   it('is dead when neighbor alive count above threshold', () => {
     const board4 = testBoard`
       --X
@@ -138,7 +138,7 @@ describe('getCellNextState()', () => {
     expect(getCellNextState(board2, 2, 1, dimensions, rules)).toBe(true);
     expect(getCellNextState(board3, 2, 2, dimensions, rules)).toBe(true);
   });
-  
+
   it('resurrects when neighbor alive count is right', () => {
     const board1 = testBoard`
       ---

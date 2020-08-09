@@ -75,7 +75,7 @@ export const reducer: Reducer<RootReducerState> = (state = DEFAULT_STATE, action
       rules: action.payload,
     };
   }
-  
+
   return state;
 };
 
