@@ -75,3 +75,22 @@ export const getNextBoardState = (board: Board, { width, height }: Dimensions, r
   }
   return nextState;
 };
+
+export const resizeBoard = (oldBoard: Board, oldDimensions: Dimensions, newDimensions: Dimensions): Board => {
+  const { width: oldWidth, height: oldHeight } = oldDimensions;
+  const { width: newWidth, height: newHeight } = newDimensions;
+  const newBoard = buildBoard(newWidth, newHeight);
+  const minWidth = Math.min(newWidth, oldWidth);
+  const minHeight = Math.min(newHeight, oldHeight);
+  for (let y = 0; y < minHeight; y++) {
+    for (let x = 0; x < minWidth; x++) {
+      const oldX = x + Math.round(Math.max(oldWidth - newWidth, 0) / 2);
+      const oldY = y + Math.round(Math.max(oldHeight - newHeight, 0) / 2);
+      const newX = x + Math.round(Math.max(newWidth - oldWidth, 0) / 2);
+      const newY = y + Math.round(Math.max(newHeight - oldHeight, 0) / 2);
+      const isAlive = getCellByCoords(oldBoard, oldX, oldY, oldDimensions);
+      setCellByCoords(newBoard, newX, newY, newDimensions, isAlive);
+    }
+  }
+  return newBoard;
+};

@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import { TypedUseSelectorHook, useSelector as useReactReduxSelector, useDispatch as useReactReduxDispatch } from 'react-redux';
-import { Rules, Dimensions, Board, buildBoard, getNextBoardState, getCellByCoords, setCellByCoords } from '../game';
+import { Rules, Dimensions, Board, buildBoard, getNextBoardState, getCellByCoords, setCellByCoords, resizeBoard } from '../game';
 import { isActionReset, isActionTick, isActionSetCell, isActionSetDimensions, isActionSetRules, isActionClearBoard } from './actions';
 
 export interface RootReducerState {
@@ -57,13 +57,12 @@ export const reducer: Reducer<RootReducerState> = (state = DEFAULT_STATE, action
   }
 
   if (isActionSetDimensions(action)) {
-    const { width, height } = action.payload;
-    const board = buildBoard(width, height);
+    const board = resizeBoard(state.board, state.dimensions, action.payload);
     return {
       ...state,
       dimensions: {
-        width,
-        height,
+        width: action.payload.width,
+        height: action.payload.height,
       },
       board,
     };
