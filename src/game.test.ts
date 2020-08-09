@@ -1,4 +1,4 @@
-import { Board, buildBoard, getIndexByCoords, getCellNextState } from './game';
+import { Board, buildBoard, getIndexByCoords, getCellNextState, resizeBoard } from './game';
 
 const testBoard = ([str]: TemplateStringsArray): Board => (
   Array.from(str.match(/[X-]/g) || [], (symbol) => symbol === 'X')
@@ -158,5 +158,49 @@ describe('getCellNextState()', () => {
     expect(getCellNextState(board1, 1, 1, dimensions, rules)).toBe(false);
     expect(getCellNextState(board2, 1, 1, dimensions, rules)).toBe(false);
     expect(getCellNextState(board3, 1, 1, dimensions, rules)).toBe(true);
+  });
+});
+
+describe('resizeBoard()', () => {
+  it('returns a similar board when given the same dimensions', () => {
+    const board = testBoard`
+      ---
+      X--
+      ---
+    `;
+    const dimensions = { width: 3, height: 3 };
+    const result = resizeBoard(board, dimensions, dimensions);
+    expect(result).not.toBe(board);
+    expect(result).toEqual(board);
+  });
+
+  it('returns a subset of the old board when shrinking', () => {
+    const oldBoard = testBoard`
+      ----
+      -XX-
+      -XX-
+      ----
+    `;
+    const expected = testBoard`
+      XX
+      XX
+    `;
+    const actual = resizeBoard(oldBoard, { width: 4, height: 4 }, { width: 2, height: 2 });
+    expect(actual).toEqual(expected);
+  });
+
+  it('returns a superset of the old board when growing', () => {
+    const oldBoard = testBoard`
+      XX
+      XX
+    `;
+    const expected = testBoard`
+      ----
+      -XX-
+      -XX-
+      ----
+    `;
+    const actual = resizeBoard(oldBoard, { width: 2, height: 2 }, { width: 4, height: 4 });
+    expect(actual).toEqual(expected);
   });
 });
