@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/checkbox-cellular-automata/precache-manifest.fd91c96f11bdb4356cbd473e2e5de906.js"
+  "/checkbox-cellular-automata/precache-manifest.0d8fc8ab3af8972f11706c21187321a5.js"
 );
 
 self.addEventListener('message', (event) => {

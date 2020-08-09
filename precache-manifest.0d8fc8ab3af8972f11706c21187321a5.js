@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8662c2f0968b8421e4795f7a9ae6b3f0",
+    "revision": "9675a1838531ba5a7e596b853d361bcb",
     "url": "/checkbox-cellular-automata/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/checkbox-cellular-automata/static/css/2.dfbc895d.chunk.css"
   },
   {
-    "revision": "7ae10c5558f9482d12bd",
-    "url": "/checkbox-cellular-automata/static/css/main.13331880.chunk.css"
+    "revision": "c93e86c473dbd296e00a",
+    "url": "/checkbox-cellular-automata/static/css/main.5d45e0b9.chunk.css"
   },
   {
     "revision": "1bf597b81f3b0850a6a9",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/checkbox-cellular-automata/static/js/2.80eda5f1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7ae10c5558f9482d12bd",
-    "url": "/checkbox-cellular-automata/static/js/main.4bc6d200.chunk.js"
+    "revision": "c93e86c473dbd296e00a",
+    "url": "/checkbox-cellular-automata/static/js/main.00d319e0.chunk.js"
   },
   {
     "revision": "3b93d8447207c4ea6ca8",
